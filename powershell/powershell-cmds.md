@@ -1,10 +1,10 @@
 # Powershell Commands
 ## Create a File
-Syntax: `New-Item "<filepath-and-name>" -ItemType <filetype> -Name "file"`
+Syntax: `New-Item -Path "<filepath-and-name>" -ItemType <filetype> -Name "file"`
 
 **Example:**
 ```powershell
-New-Item -itemtype file -name README.md
+New-Item -Path . -Name "text.txt" -ItemType file
 ``` 
 
 ## Create a Directory
