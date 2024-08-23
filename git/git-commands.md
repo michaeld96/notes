@@ -13,7 +13,7 @@ git fetch origin dev
 
 **Syntax:** `git pull`
 
-**Example**
+**Example:**
 ```
 git pull
 ```
