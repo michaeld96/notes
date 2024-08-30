@@ -37,10 +37,11 @@ add_custom_target(
 
 ## Adding Another Custom Target
 
-Now, let's say you want a test file, but this test file has
-it's own main file and needs to be ran separate from the main 
+Now, let's say you want a test file and run this file with `make test`, 
+but this test file has
+it's own `main()` and needs to be ran separate from the main 
 application. This is where we will show you how to add another 
-custom target that is different from the `${PROJECT}`s.
+custom target that is different from the `${PROJECT}`'s.
 
 ```cmake
 # include source files.
