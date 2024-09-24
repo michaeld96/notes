@@ -21,3 +21,27 @@ This file controls the startup and configuration of the app at runtime
 ## Structure: `.csproj`
 
 This file contains all the details required to build the project, including NuGet packages used by the project.
+
+## Structure: `appsettings.json` and `appsettings.Development.json`
+
+Both of these files are generated when running the `web` template
+when creating a new ASP.NET project. Both of these files provide
+configuration settings that are used at runtime to control the behavior
+of the app.
+
+## Including NuGet Packages
+
+In your `.csproj` file, this is where you will include NuGet packages
+that you want to include. To do this:
+1. Add the package inside of the project folder.
+```
+dotnet add package Newtonsoft.JSON
+```
+2. Verify that this package is referenced in your project's `.csproj`.
+```xml
+...
+<ItemGroup>
+    <PackageReference Include="NewtonSoft.Json" Version="13.0.1" />
+</ItemGroup>
+...
+```
