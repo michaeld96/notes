@@ -29,6 +29,17 @@ when creating a new ASP.NET project. Both of these files provide
 configuration settings that are used at runtime to control the behavior
 of the app.
 
+## Structure: Middleware
+
+Small components that execute in sequence when the application receives
+an HTTP request. They can perform lots of host functions such as logging, identifying the current user for the request, serving static
+files, and handling errors.
+
+## Structure Endpoints
+
+Endpoints define how the response should be generated for a specific
+request to a URL the application.
+
 ## Including NuGet Packages
 
 In your `.csproj` file, this is where you will include NuGet packages
