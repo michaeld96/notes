@@ -16,3 +16,18 @@ This command restores and compiles the app by default. Can include
 
 This restores and runs the app by default.
 
+## `dotnet new web -o <project-name>`
+
+Creates an empty ASP.NET Core Empty project.
+
+# `sln` 
+
+## `dotnet new sln -n <project-name>`
+
+This will create a solution file named whatever `<project-name>` is.
+
+## `dotnet sln add <project-name>`
+
+Adds the new project to the solution file.
+
+
