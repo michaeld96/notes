@@ -35,10 +35,48 @@ Small components that execute in sequence when the application receives
 an HTTP request. They can perform lots of host functions such as logging, identifying the current user for the request, serving static
 files, and handling errors.
 
-## Structure Endpoints
+## Structure: Endpoints
 
 Endpoints define how the response should be generated for a specific
 request to a URL the application.
+
+## Structure: Entry Point
+The entry point consists of six steps:
+1. Create a `WebApplicationBuilder` instance.
+2. Register the required services and configurations with `WebApplicationBuilder`.
+3. Call `Build()` on the builder instance to create a `WebApplication` instance.
+4. Add middleware to the `WebApplication` to create a pipeline.
+5. Map the endpoints in the application.
+6. Call `Run()` on the `WebApplication` to start the server and handle requests.
+
+```cs
+using Microsoft.AspNetCore.HttpLogging;
+
+var builder = WebApplication.CreateBuilder(args); // 1. Create WebApplication instance.
+// 2. Start registering services to the web app instance.
+builder.Services.AddHttpLogging(opts => 
+    opts.LoggingFields = HttpLoggingFields.RequestProperties
+);
+
+builder.Logging.AddFilter(
+    "Microsoft.AspNetCore.HttpLogging", LogLevel.Information
+);
+
+var app = builder.Build(); // 3. Build the instance.
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseHttpLogging(); // 4. Adding middleware.
+}
+
+app.MapGet("/", () => "Hello World!"); // 5. Map endpoints in app.
+app.MapGet("/person", () => new Person("Michael", "Dick"));
+
+app.Run(); // 6. Start the application.
+
+public record Person(string FirstName, string LastName);
+
+```
 
 ## Including NuGet Packages
 

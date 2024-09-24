@@ -130,3 +130,10 @@ delete data.
 This is when a request is sent to a server and this forwards this 
 request to the appropriate server. These are usually implemented
 to help increases security, performance, and reliability.
+
+## Path
+
+Path is the remainder of the request URL after the domain name has been removed. Example: 
+```
+mikedick.com/index.html -> index.html (the path)
+```
