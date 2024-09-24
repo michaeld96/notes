@@ -124,3 +124,9 @@ server: GitHub.com
 REST stands for representational state transfer. RESTful applications 
 typically use lightweight and stateless HTTP calls to read, post, and 
 delete data.
+
+## Reverse Proxy
+
+This is when a request is sent to a server and this forwards this 
+request to the appropriate server. These are usually implemented
+to help increases security, performance, and reliability.

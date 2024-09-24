@@ -13,3 +13,11 @@ send this back to Kestrel (the web server) and Kestrel coverts this IR
 A ASP.NET application is compiled to a intermediate language (IL) that 
 is platform-independent. If a platform has .NET runtime installed
 then the compiled IL will be ran on that platform.
+
+## Structure: `Program.cs`
+
+This file controls the startup and configuration of the app at runtime
+
+## Structure: `.csproj`
+
+This file contains all the details required to build the project, including NuGet packages used by the project.
