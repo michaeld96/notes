@@ -78,6 +78,12 @@ public record Person(string FirstName, string LastName);
 
 ```
 
+## Structure: Services
+
+Service refers to any class that provides functionality to an 
+application. Services could be classes exposed by a library or 
+code you've written for your application. 
+
 ## Including NuGet Packages
 
 In your `.csproj` file, this is where you will include NuGet packages
